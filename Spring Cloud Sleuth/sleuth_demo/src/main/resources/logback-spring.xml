@@ -1,0 +1,8 @@
+<?xml version="1.0" enconding="UTF-8" ?>
+<configuration>
+    <include resource="org/springframework/boot/logging/logback/defaluts.xml">
+        <springProperty scope="context" name="springAppName" source="spring.application.name"/>
+
+        <property name="LOG_FILE" value="${BUILD_DOLDER:-build}/${springAppName}"/>
+    </include>
+</configuration>
